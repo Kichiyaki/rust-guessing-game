@@ -3,8 +3,11 @@ use std::io;
 
 use rand::Rng;
 
+const MIN_NUMBER: u32 = 1;
+const MAX_NUMBER: u32 = 10;
+
 fn main() {
-    let secret_number = rand::thread_rng().gen_range(1..10);
+    let secret_number = rand::thread_rng().gen_range(MIN_NUMBER..MAX_NUMBER);
     println!("Welcome!");
     loop {
         let mut input = String::new();
